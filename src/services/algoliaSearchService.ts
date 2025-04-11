@@ -48,7 +48,6 @@ export interface AlgoliaNodePack {
     'latest_version',
     'comfy_node_extract_status'
   >
-  /** `total_install` index only */
   icon_url: RegistryNodePack['icon']
 }
 
@@ -67,7 +66,8 @@ const RETRIEVE_ATTRIBUTES: SearchAttribute[] = [
   'repository_url',
   'latest_version_status',
   'comfy_node_extract_status',
-  'id'
+  'id',
+  'icon_url'
 ]
 
 export interface NodesIndexSuggestion {
