@@ -198,8 +198,9 @@
     "reportIssue": "Enviar informe",
     "reportIssueTooltip": "Enviar el informe de error a Comfy Org",
     "reportSent": "Informe enviado",
-    "reset": "Restablecer",
-    "resetKeybindingsTooltip": "Restablecer combinaciones de teclas a la configuración predeterminada",
+    "reset": "Reiniciar",
+    "resetAll": "Restablecer todo",
+    "resetAllKeybindingsTooltip": "Restablecer todas las teclas de acceso rápido a la configuración predeterminada",
     "restart": "Reiniciar",
     "resultsCount": "Encontrados {count} resultados",
     "save": "Guardar",
@@ -214,6 +215,7 @@
     "settings": "Configuraciones",
     "showReport": "Mostrar informe",
     "sort": "Ordenar",
+    "source": "Fuente",
     "status": "Estado",
     "success": "Éxito",
     "systemInfo": "Información del sistema",
@@ -428,6 +430,8 @@
     "loadingVersions": "Cargando versiones...",
     "nightlyVersion": "Nocturna",
     "noDescription": "No hay descripción disponible",
+    "noNodesFound": "No se encontraron nodos",
+    "noNodesFoundDescription": "Los nodos del paquete no se pudieron analizar, o el paquete es solo una extensión de frontend y no tiene ningún nodo.",
     "noResultsFound": "No se encontraron resultados que coincidan con tu búsqueda.",
     "nodePack": "Paquete de Nodos",
     "packsSelected": "Paquetes Seleccionados",
@@ -436,8 +440,10 @@
     "searchPlaceholder": "Buscar",
     "selectVersion": "Seleccionar Versión",
     "sort": {
+      "created": "Más reciente",
       "downloads": "Más Popular",
-      "rating": "Calificación"
+      "publisher": "Editor",
+      "updated": "Actualizado recientemente"
     },
     "status": {
       "active": "Activo",
@@ -806,9 +812,11 @@
     "troubleshoot": "Solucionar problemas"
   },
   "settingsCategories": {
+    "3D": "3D",
     "About": "Acerca de",
     "Appearance": "Apariencia",
     "BrushAdjustment": "Ajuste de Pincel",
+    "Camera": "Cámara",
     "Canvas": "Lienzo",
     "ColorPalette": "Paleta de Colores",
     "Comfy": "Comfy",
@@ -825,6 +833,7 @@
     "Link": "Enlace",
     "LinkRelease": "Liberación de Enlace",
     "LiteGraph": "Lite Graph",
+    "Load 3D": "Cargar 3D",
     "Locale": "Localización",
     "Mask Editor": "Editor de Máscara",
     "Menu": "Menú",
@@ -839,6 +848,7 @@
     "QueueButton": "Botón de Cola",
     "Reroute": "Reenrutar",
     "RerouteBeta": "Reroute Beta",
+    "Scene": "Escena",
     "Server": "Servidor",
     "Server-Config": "Configuración del Servidor",
     "Settings": "Configuraciones",

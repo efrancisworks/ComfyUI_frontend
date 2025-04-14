@@ -28,6 +28,14 @@
               @click="editKeybinding(slotProps.data)"
             />
             <Button
+              icon="pi pi-replay"
+              class="p-button-text p-button-warn"
+              :disabled="
+                !keybindingStore.isCommandKeybindingModified(slotProps.data.id)
+              "
+              @click="resetKeybinding(slotProps.data)"
+            />
+            <Button
               icon="pi pi-trash"
               class="p-button-text p-button-danger"
               :disabled="!slotProps.data.keybinding"
@@ -61,6 +69,13 @@
             "
           />
           <span v-else>-</span>
+        </template>
+      </Column>
+      <Column field="source" :header="$t('g.source')">
+        <template #body="slotProps">
+          <span class="overflow-hidden text-ellipsis">{{
+            slotProps.data.source || '-'
+          }}</span>
         </template>
       </Column>
     </DataTable>
@@ -101,14 +116,14 @@
       </template>
     </Dialog>
     <Button
-      v-tooltip="$t('g.resetKeybindingsTooltip')"
+      v-tooltip="$t('g.resetAllKeybindingsTooltip')"
       class="mt-4"
-      :label="$t('g.reset')"
-      icon="pi pi-trash"
+      :label="$t('g.resetAll')"
+      icon="pi pi-replay"
       severity="danger"
       fluid
       text
-      @click="resetKeybindings"
+      @click="resetAllKeybindings"
     />
   </PanelTemplate>
 </template>
@@ -152,6 +167,7 @@ interface ICommandData {
   id: string
   keybinding: KeybindingImpl | null
   label: string
+  source?: string
 }
 
 const commandsData = computed<ICommandData[]>(() => {
@@ -161,7 +177,8 @@ const commandsData = computed<ICommandData[]>(() => {
       `commands.${normalizeI18nKey(command.id)}.label`,
       command.label ?? ''
     ),
-    keybinding: keybindingStore.getKeybindingByCommandId(command.id)
+    keybinding: keybindingStore.getKeybindingByCommandId(command.id),
+    source: command.source
   }))
 })
 
@@ -254,14 +271,24 @@ async function saveKeybinding() {
   cancelEdit()
 }
 
+async function resetKeybinding(commandData: ICommandData) {
+  if (keybindingStore.resetKeybindingForCommand(commandData.id)) {
+    await keybindingService.persistUserKeybindings()
+  } else {
+    console.warn(
+      `No changes made when resetting keybinding for command: ${commandData.id}`
+    )
+  }
+}
+
 const toast = useToast()
-async function resetKeybindings() {
-  keybindingStore.resetKeybindings()
+async function resetAllKeybindings() {
+  keybindingStore.resetAllKeybindings()
   await keybindingService.persistUserKeybindings()
   toast.add({
     severity: 'info',
     summary: 'Info',
-    detail: 'Keybindings reset',
+    detail: 'All keybindings reset',
     life: 3000
   })
 }

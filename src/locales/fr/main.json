@@ -199,7 +199,8 @@
     "reportIssueTooltip": "Soumettre le rapport d'erreur à Comfy Org",
     "reportSent": "Rapport soumis",
     "reset": "Réinitialiser",
-    "resetKeybindingsTooltip": "Réinitialiser les raccourcis clavier par défaut",
+    "resetAll": "Réinitialiser tout",
+    "resetAllKeybindingsTooltip": "Réinitialiser tous les raccourcis clavier par défaut",
     "restart": "Redémarrer",
     "resultsCount": "{count} Résultats Trouvés",
     "save": "Enregistrer",
@@ -214,6 +215,7 @@
     "settings": "Paramètres",
     "showReport": "Afficher le rapport",
     "sort": "Trier",
+    "source": "Source",
     "status": "Statut",
     "success": "Succès",
     "systemInfo": "Informations système",
@@ -428,6 +430,8 @@
     "loadingVersions": "Chargement des versions...",
     "nightlyVersion": "Nocturne",
     "noDescription": "Aucune description disponible",
+    "noNodesFound": "Aucun nœud trouvé",
+    "noNodesFoundDescription": "Les nœuds du pack n'ont pas pu être analysés, ou le pack est une extension frontend uniquement et n'a pas de nœuds.",
     "noResultsFound": "Aucun résultat trouvé correspondant à votre recherche.",
     "nodePack": "Pack de Nœuds",
     "packsSelected": "Packs sélectionnés",
@@ -436,8 +440,10 @@
     "searchPlaceholder": "Recherche",
     "selectVersion": "Sélectionner la version",
     "sort": {
+      "created": "Le plus récent",
       "downloads": "Le plus populaire",
-      "rating": "Évaluation"
+      "publisher": "Éditeur",
+      "updated": "Mis à jour récemment"
     },
     "status": {
       "active": "Actif",
@@ -806,9 +812,11 @@
     "troubleshoot": "Dépannage"
   },
   "settingsCategories": {
+    "3D": "3D",
     "About": "À Propos",
     "Appearance": "Apparence",
     "BrushAdjustment": "Ajustement de Brosse",
+    "Camera": "Caméra",
     "Canvas": "Toile",
     "ColorPalette": "Palette de Couleurs",
     "Comfy": "Confort",
@@ -825,6 +833,7 @@
     "Link": "Lien",
     "LinkRelease": "Libération de Lien",
     "LiteGraph": "Lite Graph",
+    "Load 3D": "Charger 3D",
     "Locale": "Locale",
     "Mask Editor": "Éditeur de Masque",
     "Menu": "Menu",
@@ -839,6 +848,7 @@
     "QueueButton": "Bouton de File d'Attente",
     "Reroute": "Réacheminement",
     "RerouteBeta": "Reroute Beta",
+    "Scene": "Scène",
     "Server": "Serveur",
     "Server-Config": "Config-Serveur",
     "Settings": "Paramètres",

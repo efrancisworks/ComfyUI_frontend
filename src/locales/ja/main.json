@@ -199,7 +199,8 @@
     "reportIssueTooltip": "エラーレポートをComfy Orgに送信",
     "reportSent": "レポートが送信されました",
     "reset": "リセット",
-    "resetKeybindingsTooltip": "キーバインディングをデフォルトにリセット",
+    "resetAll": "すべてリセット",
+    "resetAllKeybindingsTooltip": "すべてのキーバインディングをデフォルトにリセット",
     "restart": "再起動",
     "resultsCount": "{count}件の結果が見つかりました",
     "save": "保存",
@@ -214,6 +215,7 @@
     "settings": "設定",
     "showReport": "レポートを表示",
     "sort": "並び替え",
+    "source": "ソース",
     "status": "ステータス",
     "success": "成功",
     "systemInfo": "システム情報",
@@ -428,6 +430,8 @@
     "loadingVersions": "バージョンを読み込んでいます...",
     "nightlyVersion": "ナイトリー",
     "noDescription": "説明はありません",
+    "noNodesFound": "ノードが見つかりません",
+    "noNodesFoundDescription": "パックのノードは解析できなかったか、パックがフロントエンドの拡張機能のみでノードがない可能性があります。",
     "noResultsFound": "検索に一致する結果が見つかりませんでした。",
     "nodePack": "ノードパック",
     "packsSelected": "選択したパック",
@@ -436,8 +440,10 @@
     "searchPlaceholder": "検索",
     "selectVersion": "バージョンを選択",
     "sort": {
+      "created": "最新",
       "downloads": "最も人気",
-      "rating": "評価"
+      "publisher": "出版社",
+      "updated": "最近更新"
     },
     "status": {
       "active": "アクティブ",
@@ -806,9 +812,11 @@
     "troubleshoot": "トラブルシューティング"
   },
   "settingsCategories": {
+    "3D": "3D",
     "About": "情報",
     "Appearance": "外観",
     "BrushAdjustment": "ブラシ調整",
+    "Camera": "カメラ",
     "Canvas": "キャンバス",
     "ColorPalette": "カラーパレット",
     "Comfy": "Comfy",
@@ -825,6 +833,7 @@
     "Link": "リンク",
     "LinkRelease": "リンク解除",
     "LiteGraph": "Lite Graph",
+    "Load 3D": "3Dを読み込む",
     "Locale": "ロケール",
     "Mask Editor": "マスクエディタ",
     "Menu": "メニュー",
@@ -839,6 +848,7 @@
     "QueueButton": "キューボタン",
     "Reroute": "リルート",
     "RerouteBeta": "ルート変更ベータ",
+    "Scene": "シーン",
     "Server": "サーバー",
     "Server-Config": "サーバー設定",
     "Settings": "設定",

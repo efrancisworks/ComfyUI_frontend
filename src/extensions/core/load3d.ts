@@ -18,7 +18,39 @@ import { generateUUID } from '@/utils/formatUtil'
 
 useExtensionService().registerExtension({
   name: 'Comfy.Load3D',
-
+  settings: [
+    {
+      id: 'Comfy.Load3D.ShowGrid',
+      category: ['3D', 'Scene', 'Initial Grid Visibility'],
+      name: 'Initial Grid Visibility',
+      tooltip:
+        'Controls whether the grid is visible by default when a new 3D widget is created. This default can still be toggled individually for each widget after creation.',
+      type: 'boolean',
+      defaultValue: true,
+      experimental: true
+    },
+    {
+      id: 'Comfy.Load3D.ShowPreview',
+      category: ['3D', 'Scene', 'Initial Preview Visibility'],
+      name: 'Initial Preview Visibility',
+      tooltip:
+        'Controls whether the preview screen is visible by default when a new 3D widget is created. This default can still be toggled individually for each widget after creation.',
+      type: 'boolean',
+      defaultValue: true,
+      experimental: true
+    },
+    {
+      id: 'Comfy.Load3D.CameraType',
+      category: ['3D', 'Camera', 'Initial Camera Type'],
+      name: 'Initial Camera Type',
+      tooltip:
+        'Controls whether the camera is perspective or orthographic by default when a new 3D widget is created. This default can still be toggled individually for each widget after creation.',
+      type: 'combo',
+      options: ['perspective', 'orthographic'],
+      defaultValue: 'perspective',
+      experimental: true
+    }
+  ],
   getCustomWidgets() {
     return {
       LOAD_3D(node) {
@@ -153,7 +185,8 @@ useExtensionService().registerExtension({
             image: `threed/${data.name} [temp]`,
             mask: `threed/${dataMask.name} [temp]`,
             normal: `threed/${dataNormal.name} [temp]`,
-            lineart: `threed/${dataLineart.name} [temp]`
+            lineart: `threed/${dataLineart.name} [temp]`,
+            camera_info: node.properties['Camera Info']
           }
         }
       }
@@ -293,7 +326,8 @@ useExtensionService().registerExtension({
         return {
           image: `threed/${data.name} [temp]`,
           mask: `threed/${dataMask.name} [temp]`,
-          normal: `threed/${dataNormal.name} [temp]`
+          normal: `threed/${dataNormal.name} [temp]`,
+          camera_info: node.properties['Camera Info']
         }
       }
     }
@@ -350,7 +384,7 @@ useExtensionService().registerExtension({
     node.onExecuted = function (message: any) {
       onExecuted?.apply(this, arguments as any)
 
-      let filePath = message.model_file[0]
+      let filePath = message.result[0]
 
       if (!filePath) {
         const msg = t('toastMessages.unableToGetModelFilePath')
@@ -359,6 +393,8 @@ useExtensionService().registerExtension({
       }
 
       const load3d = useLoad3dService().getLoad3d(node)
+
+      let cameraState = message.result[1]
 
       const modelWidget = node.widgets?.find(
         (w: IWidget) => w.name === 'model_file'
@@ -369,7 +405,7 @@ useExtensionService().registerExtension({
 
         const config = new Load3DConfiguration(load3d)
 
-        config.configure('output', modelWidget)
+        config.configure('output', modelWidget, cameraState)
       }
     }
   }
@@ -425,13 +461,15 @@ useExtensionService().registerExtension({
     node.onExecuted = function (message: any) {
       onExecuted?.apply(this, arguments as any)
 
-      let filePath = message.model_file[0]
+      let filePath = message.result[0]
 
       if (!filePath) {
         const msg = t('toastMessages.unableToGetModelFilePath')
         console.error(msg)
         useToastStore().addAlert(msg)
       }
+
+      let cameraState = message.result[1]
 
       const load3d = useLoad3dService().getLoad3d(node)
 
@@ -443,7 +481,7 @@ useExtensionService().registerExtension({
 
         const config = new Load3DConfiguration(load3d)
 
-        config.configure('output', modelWidget)
+        config.configure('output', modelWidget, cameraState)
       }
     }
   }

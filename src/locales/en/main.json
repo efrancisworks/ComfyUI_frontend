@@ -22,7 +22,8 @@
     "confirm": "Confirm",
     "confirmed": "Confirmed",
     "reset": "Reset",
-    "resetKeybindingsTooltip": "Reset keybindings to default",
+    "resetAll": "Reset All",
+    "resetAllKeybindingsTooltip": "Reset all keybindings to default",
     "customizeFolder": "Customize Folder",
     "icon": "Icon",
     "color": "Color",
@@ -93,6 +94,7 @@
     "name": "Name",
     "category": "Category",
     "sort": "Sort",
+    "source": "Source",
     "filter": "Filter",
     "apply": "Apply",
     "enabled": "Enabled",
@@ -111,6 +113,8 @@
   "manager": {
     "title": "Custom Nodes Manager",
     "failed": "Failed ({count})",
+    "noNodesFound": "No nodes found",
+    "noNodesFoundDescription": "The pack's nodes either could not be parsed, or the pack is a frontend extension only and doesn't have any nodes.",
     "installationQueue": "Installation Queue",
     "changingVersion": "Changing version from {from} to {to}",
     "dependencies": "Dependencies",
@@ -152,8 +156,10 @@
       "unknown": "Unknown"
     },
     "sort": {
-      "rating": "Rating",
-      "downloads": "Most Popular"
+      "downloads": "Most Popular",
+      "publisher": "Publisher",
+      "created": "Newest",
+      "updated": "Updated Recently"
     },
     "filter": {
       "nodePack": "Node Pack",
@@ -710,7 +716,11 @@
     "CustomColorPalettes": "Custom Color Palettes",
     "UV": "UV",
     "ContextMenu": "Context Menu",
-    "Reroute": "Reroute"
+    "Reroute": "Reroute",
+    "Load 3D": "Load 3D",
+    "Camera": "Camera",
+    "Scene": "Scene",
+    "3D": "3D"
   },
   "serverConfigItems": {
     "listen": {

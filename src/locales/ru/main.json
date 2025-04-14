@@ -198,8 +198,9 @@
     "reportIssue": "Отправить отчёт",
     "reportIssueTooltip": "Отправить отчёт об ошибке в Comfy Org",
     "reportSent": "Отчёт отправлен",
-    "reset": "Сбросить",
-    "resetKeybindingsTooltip": "Сбросить сочетания клавиш по умолчанию",
+    "reset": "Сброс",
+    "resetAll": "Сбросить все",
+    "resetAllKeybindingsTooltip": "Сбросить все сочетания клавиш по умолчанию",
     "restart": "Перезапустить",
     "resultsCount": "Найдено {count} результатов",
     "save": "Сохранить",
@@ -214,6 +215,7 @@
     "settings": "Настройки",
     "showReport": "Показать отчёт",
     "sort": "Сортировать",
+    "source": "Источник",
     "status": "Статус",
     "success": "Успех",
     "systemInfo": "Информация о системе",
@@ -428,6 +430,8 @@
     "loadingVersions": "Загрузка версий...",
     "nightlyVersion": "Ночная",
     "noDescription": "Описание отсутствует",
+    "noNodesFound": "Узлы не найдены",
+    "noNodesFoundDescription": "Узлы пакета не могут быть проанализированы, или пакет является только расширением интерфейса и не имеет узлов.",
     "noResultsFound": "По вашему запросу ничего не найдено.",
     "nodePack": "Пакет Узлов",
     "packsSelected": "Выбрано пакетов",
@@ -436,8 +440,10 @@
     "searchPlaceholder": "Поиск",
     "selectVersion": "Выберите версию",
     "sort": {
+      "created": "Новейшие",
       "downloads": "Самые популярные",
-      "rating": "Рейтинг"
+      "publisher": "Издатель",
+      "updated": "Недавно обновленные"
     },
     "status": {
       "active": "Активный",
@@ -806,9 +812,11 @@
     "troubleshoot": "Устранение неполадок"
   },
   "settingsCategories": {
+    "3D": "3D",
     "About": "О программе",
     "Appearance": "Внешний вид",
     "BrushAdjustment": "Настройка кисти",
+    "Camera": "Камера",
     "Canvas": "Холст",
     "ColorPalette": "Цветовая палитра",
     "Comfy": "Comfy",
@@ -825,6 +833,7 @@
     "Link": "Ссылка",
     "LinkRelease": "Освобождение ссылки",
     "LiteGraph": "Lite Graph",
+    "Load 3D": "Загрузить 3D",
     "Locale": "Локализация",
     "Mask Editor": "Редактор масок",
     "Menu": "Меню",
@@ -839,6 +848,7 @@
     "QueueButton": "Кнопка очереди",
     "Reroute": "Перенаправление",
     "RerouteBeta": "Бета-версия перенаправления",
+    "Scene": "Сцена",
     "Server": "Сервер",
     "Server-Config": "Настройки сервера",
     "Settings": "Настройки",

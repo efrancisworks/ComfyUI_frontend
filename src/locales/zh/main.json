@@ -199,7 +199,8 @@
     "reportIssueTooltip": "向 Comfy Org 提交错误报告",
     "reportSent": "报告已提交",
     "reset": "重置",
-    "resetKeybindingsTooltip": "将快捷键重置为默认",
+    "resetAll": "重置所有",
+    "resetAllKeybindingsTooltip": "将所有键绑定重置为默认",
     "restart": "重新启动",
     "resultsCount": "找到 {count} 个结果",
     "save": "保存",
@@ -214,6 +215,7 @@
     "settings": "设置",
     "showReport": "显示报告",
     "sort": "排序",
+    "source": "来源",
     "status": "状态",
     "success": "成功",
     "systemInfo": "系统信息",
@@ -428,6 +430,8 @@
     "loadingVersions": "正在加载版本...",
     "nightlyVersion": "每夜",
     "noDescription": "无可用描述",
+    "noNodesFound": "未找到节点",
+    "noNodesFoundDescription": "无法解析包的节点，或者该包仅为前端扩展，没有任何节点。",
     "noResultsFound": "未找到符合您搜索的结果。",
     "nodePack": "节点包",
     "packsSelected": "选定的包",
@@ -436,8 +440,10 @@
     "searchPlaceholder": "搜索",
     "selectVersion": "选择版本",
     "sort": {
+      "created": "最新",
       "downloads": "最受欢迎",
-      "rating": "评级"
+      "publisher": "出版商",
+      "updated": "最近更新"
     },
     "status": {
       "active": "活跃",
@@ -806,9 +812,11 @@
     "troubleshoot": "故障排除"
   },
   "settingsCategories": {
+    "3D": "3D",
     "About": "关于",
     "Appearance": "外观",
     "BrushAdjustment": "画笔调整",
+    "Camera": "相机",
     "Canvas": "画布",
     "ColorPalette": "色彩主题",
     "Comfy": "Comfy",
@@ -825,6 +833,7 @@
     "Link": "连线",
     "LinkRelease": "释放链接",
     "LiteGraph": "画面",
+    "Load 3D": "加载3D",
     "Locale": "区域设置",
     "Mask Editor": "遮罩编辑器",
     "Menu": "菜单",
@@ -839,6 +848,7 @@
     "QueueButton": "执行按钮",
     "Reroute": "重新路由",
     "RerouteBeta": "转接点 Beta",
+    "Scene": "场景",
     "Server": "服务器",
     "Server-Config": "服务器配置",
     "Settings": "设置",
