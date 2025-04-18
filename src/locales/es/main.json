@@ -8,6 +8,42 @@
     "message": "Este flujo de trabajo contiene nodos de API, que requieren que inicies sesión en tu cuenta para poder ejecutar.",
     "title": "Se requiere iniciar sesión para usar los nodos de API"
   },
+  "auth": {
+    "login": {
+      "andText": "y",
+      "confirmPasswordLabel": "Confirmar contraseña",
+      "confirmPasswordPlaceholder": "Ingresa la misma contraseña nuevamente",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "Ingresa tu correo electrónico",
+      "failed": "Inicio de sesión fallido",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "loginButton": "Iniciar sesión",
+      "loginWithGithub": "Iniciar sesión con Github",
+      "loginWithGoogle": "Iniciar sesión con Google",
+      "newUser": "¿Eres nuevo aquí?",
+      "orContinueWith": "O continuar con",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "privacyLink": "Política de privacidad",
+      "signUp": "Regístrate",
+      "success": "Inicio de sesión exitoso",
+      "termsLink": "Términos de uso",
+      "termsText": "Al hacer clic en \"Siguiente\" o \"Registrarse\", aceptas nuestros",
+      "title": "Inicia sesión en tu cuenta"
+    },
+    "signup": {
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "Ingresa tu correo electrónico",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Ingresa una nueva contraseña",
+      "signIn": "Iniciar sesión",
+      "signUpButton": "Registrarse",
+      "signUpWithGithub": "Registrarse con Github",
+      "signUpWithGoogle": "Registrarse con Google",
+      "title": "Crea una cuenta"
+    }
+  },
   "clipboard": {
     "errorMessage": "Error al copiar al portapapeles",
     "errorNotSupported": "API del portapapeles no soportada en su navegador",
@@ -933,8 +969,7 @@
       "ControlNet": "ControlNet",
       "Custom Nodes": "Nodos Personalizados",
       "Flux": "Flux",
-      "SD3_5": "SD3.5",
-      "SDXL": "SDXL",
+      "Image": "Imagen",
       "Upscaling": "Ampliación",
       "Video": "Video"
     },
@@ -979,13 +1014,14 @@
         "flux_redux_model_example": "Flux Redux Model",
         "flux_schnell": "Flux Schnell"
       },
-      "SD3_5": {
+      "Image": {
+        "hidream_i1_dev": "HiDream I1 Dev",
+        "hidream_i1_fast": "HiDream I1 Rápido",
+        "hidream_i1_full": "HiDream I1 Completo",
         "sd3_5_large_blur": "SD3.5 Grande Desenfoque",
         "sd3_5_large_canny_controlnet_example": "SD3.5 Grande Canny ControlNet",
         "sd3_5_large_depth": "SD3.5 Grande Profundidad",
-        "sd3_5_simple_example": "SD3.5 Simple"
-      },
-      "SDXL": {
+        "sd3_5_simple_example": "SD3.5 Simple",
         "sdxl_refiner_prompt_example": "SDXL Refinador de Solicitud",
         "sdxl_revision_text_prompts": "SDXL Revisión de Solicitud de Texto",
         "sdxl_revision_zero_positive": "SDXL Revisión Cero Positivo",
@@ -1006,7 +1042,9 @@
         "ltxv_text_to_video": "LTXV Texto a Video",
         "mochi_text_to_video_example": "Mochi Texto a Video",
         "text_to_video_wan": "Wan 2.1 Texto a Video",
-        "txt_to_image_to_video": "SVD Texto a Imagen a Video"
+        "txt_to_image_to_video": "SVD Texto a Imagen a Video",
+        "wan2_1_fun_control": "Wan 2.1 ControlNet",
+        "wan2_1_fun_inp": "Wan 2.1 Relleno"
       }
     },
     "title": "Comienza con una Plantilla"
@@ -1042,6 +1080,21 @@
     "newUser": "Nuevo usuario",
     "next": "Siguiente",
     "selectUser": "Selecciona un usuario"
+  },
+  "validation": {
+    "invalidEmail": "Dirección de correo electrónico inválida",
+    "maxLength": "No debe tener más de {length} caracteres",
+    "minLength": "Debe tener al menos {length} caracteres",
+    "password": {
+      "lowercase": "Debe contener al menos una letra minúscula",
+      "match": "Las contraseñas deben coincidir",
+      "minLength": "Debe tener entre 8 y 32 caracteres",
+      "number": "Debe contener al menos un número",
+      "requirements": "Requisitos de la contraseña",
+      "special": "Debe contener al menos un carácter especial",
+      "uppercase": "Debe contener al menos una letra mayúscula"
+    },
+    "required": "Requerido"
   },
   "welcome": {
     "getStarted": "Empezar",

@@ -8,6 +8,42 @@
     "message": "이 워크플로우에는 API 노드가 포함되어 있으며, 실행하려면 계정에 로그인해야 합니다.",
     "title": "API 노드 사용에 필요한 로그인"
   },
+  "auth": {
+    "login": {
+      "andText": "및",
+      "confirmPasswordLabel": "비밀번호 확인",
+      "confirmPasswordPlaceholder": "동일한 비밀번호를 다시 입력하세요",
+      "emailLabel": "이메일",
+      "emailPlaceholder": "이메일을 입력하세요",
+      "failed": "로그인 실패",
+      "forgotPassword": "비밀번호를 잊으셨나요?",
+      "loginButton": "로그인",
+      "loginWithGithub": "Github로 로그인",
+      "loginWithGoogle": "구글로 로그인",
+      "newUser": "처음이신가요?",
+      "orContinueWith": "또는 다음으로 계속",
+      "passwordLabel": "비밀번호",
+      "passwordPlaceholder": "비밀번호를 입력하세요",
+      "privacyLink": "개인정보 보호정책",
+      "signUp": "가입하기",
+      "success": "로그인 성공",
+      "termsLink": "이용 약관",
+      "termsText": "\"다음\" 또는 \"가입하기\"를 클릭하면 우리의",
+      "title": "계정에 로그인"
+    },
+    "signup": {
+      "alreadyHaveAccount": "이미 계정이 있으신가요?",
+      "emailLabel": "이메일",
+      "emailPlaceholder": "이메일을 입력하세요",
+      "passwordLabel": "비밀번호",
+      "passwordPlaceholder": "새 비밀번호를 입력하세요",
+      "signIn": "로그인",
+      "signUpButton": "가입하기",
+      "signUpWithGithub": "Github로 가입하기",
+      "signUpWithGoogle": "구글로 가입하기",
+      "title": "계정 생성"
+    }
+  },
   "clipboard": {
     "errorMessage": "클립보드에 복사하지 못했습니다",
     "errorNotSupported": "브라우저가 클립보드 API를 지원하지 않습니다.",
@@ -933,8 +969,7 @@
       "ControlNet": "컨트롤넷",
       "Custom Nodes": "사용자 정의 노드",
       "Flux": "FLUX",
-      "SD3_5": "SD3.5",
-      "SDXL": "SDXL",
+      "Image": "이미지",
       "Upscaling": "업스케일링",
       "Video": "비디오"
     },
@@ -979,13 +1014,14 @@
         "flux_redux_model_example": "FLUX Redux 모델 예제",
         "flux_schnell": "FLUX Schnell"
       },
-      "SD3_5": {
+      "Image": {
+        "hidream_i1_dev": "HiDream I1 개발",
+        "hidream_i1_fast": "HiDream I1 빠른",
+        "hidream_i1_full": "HiDream I1 전체",
         "sd3_5_large_blur": "SD3.5 Large 블러 컨트롤넷",
         "sd3_5_large_canny_controlnet_example": "SD3.5 Large 캐니 컨트롤넷",
         "sd3_5_large_depth": "SD3.5 Large 깊이 컨트롤넷",
-        "sd3_5_simple_example": "간단한 SD3.5 예제"
-      },
-      "SDXL": {
+        "sd3_5_simple_example": "간단한 SD3.5 예제",
         "sdxl_refiner_prompt_example": "SDXL 리파이너 프롬프트",
         "sdxl_revision_text_prompts": "SDXL Revision 텍스트 프롬프트",
         "sdxl_revision_zero_positive": "SDXL Revision Zero Positive",
@@ -1006,7 +1042,9 @@
         "ltxv_text_to_video": "텍스트 -> 동영상 (LTXV)",
         "mochi_text_to_video_example": "텍스트 -> 동영상 (Mochi)",
         "text_to_video_wan": "Wan 2.1 텍스트를 비디오로",
-        "txt_to_image_to_video": "텍스트 -> 이미지 -> 동영상"
+        "txt_to_image_to_video": "텍스트 -> 이미지 -> 동영상",
+        "wan2_1_fun_control": "Wan 2.1 컨트롤넷",
+        "wan2_1_fun_inp": "Wan 2.1 인페인트"
       }
     },
     "title": "템플릿으로 시작하기"
@@ -1042,6 +1080,21 @@
     "newUser": "새 사용자",
     "next": "다음",
     "selectUser": "사용자 선택"
+  },
+  "validation": {
+    "invalidEmail": "유효하지 않은 이메일 주소",
+    "maxLength": "{length}자를 초과할 수 없습니다",
+    "minLength": "{length}자 이상이어야 합니다",
+    "password": {
+      "lowercase": "적어도 하나의 소문자를 포함해야 합니다",
+      "match": "비밀번호가 일치해야 합니다",
+      "minLength": "8자에서 32자 사이여야 합니다",
+      "number": "적어도 하나의 숫자를 포함해야 합니다",
+      "requirements": "비밀번호 요구사항",
+      "special": "적어도 하나의 특수 문자를 포함해야 합니다",
+      "uppercase": "적어도 하나의 대문자를 포함해야 합니다"
+    },
+    "required": "필수"
   },
   "welcome": {
     "getStarted": "시작하기",

@@ -8,6 +8,42 @@
     "message": "このワークフローにはAPIノードが含まれており、実行するためにはアカウントにサインインする必要があります。",
     "title": "APIノードを使用するためにはサインインが必要です"
   },
+  "auth": {
+    "login": {
+      "andText": "および",
+      "confirmPasswordLabel": "パスワードの確認",
+      "confirmPasswordPlaceholder": "もう一度同じパスワードを入力してください",
+      "emailLabel": "メール",
+      "emailPlaceholder": "メールアドレスを入力してください",
+      "failed": "ログイン失敗",
+      "forgotPassword": "パスワードを忘れましたか？",
+      "loginButton": "ログイン",
+      "loginWithGithub": "Githubでログイン",
+      "loginWithGoogle": "Googleでログイン",
+      "newUser": "新規ユーザーですか？",
+      "orContinueWith": "または以下で続ける",
+      "passwordLabel": "パスワード",
+      "passwordPlaceholder": "パスワードを入力してください",
+      "privacyLink": "プライバシーポリシー",
+      "signUp": "サインアップ",
+      "success": "ログイン成功",
+      "termsLink": "利用規約",
+      "termsText": "「次へ」または「サインアップ」をクリックすると、私たちの",
+      "title": "アカウントにログインする"
+    },
+    "signup": {
+      "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
+      "emailLabel": "メール",
+      "emailPlaceholder": "メールアドレスを入力してください",
+      "passwordLabel": "パスワード",
+      "passwordPlaceholder": "新しいパスワードを入力してください",
+      "signIn": "サインイン",
+      "signUpButton": "サインアップ",
+      "signUpWithGithub": "Githubでサインアップ",
+      "signUpWithGoogle": "Googleでサインアップ",
+      "title": "アカウントを作成する"
+    }
+  },
   "clipboard": {
     "errorMessage": "クリップボードへのコピーに失敗しました",
     "errorNotSupported": "お使いのブラウザではクリップボードAPIがサポートされていません",
@@ -933,8 +969,7 @@
       "ControlNet": "ControlNet",
       "Custom Nodes": "カスタムノード",
       "Flux": "Flux",
-      "SD3_5": "SD3.5",
-      "SDXL": "SDXL",
+      "Image": "画像",
       "Upscaling": "アップスケーリング",
       "Video": "ビデオ"
     },
@@ -979,13 +1014,14 @@
         "flux_redux_model_example": "Flux Reduxモデル",
         "flux_schnell": "Flux Schnell"
       },
-      "SD3_5": {
+      "Image": {
+        "hidream_i1_dev": "HiDream I1 Dev",
+        "hidream_i1_fast": "HiDream I1 Fast",
+        "hidream_i1_full": "HiDream I1 Full",
         "sd3_5_large_blur": "SD3.5 ラージブラー",
         "sd3_5_large_canny_controlnet_example": "SD3.5 ラージキャニーコントロールネット",
         "sd3_5_large_depth": "SD3.5 ラージデプス",
-        "sd3_5_simple_example": "SD3.5 シンプル"
-      },
-      "SDXL": {
+        "sd3_5_simple_example": "SD3.5 シンプル",
         "sdxl_refiner_prompt_example": "SDXL Refinerプロンプト",
         "sdxl_revision_text_prompts": "SDXL Revisionテキストプロンプト",
         "sdxl_revision_zero_positive": "SDXL Revisionゼロポジティブ",
@@ -1006,7 +1042,9 @@
         "ltxv_text_to_video": "LTXVテキストからビデオへ",
         "mochi_text_to_video_example": "Mochiテキストからビデオへ",
         "text_to_video_wan": "Wan 2.1 テキストからビデオへ",
-        "txt_to_image_to_video": "テキストから画像へ、画像からビデオへ"
+        "txt_to_image_to_video": "テキストから画像へ、画像からビデオへ",
+        "wan2_1_fun_control": "Wan 2.1 ControlNet",
+        "wan2_1_fun_inp": "Wan 2.1 インペインティング"
       }
     },
     "title": "テンプレートを利用して開始"
@@ -1042,6 +1080,21 @@
     "newUser": "新しいユーザー",
     "next": "次へ",
     "selectUser": "ユーザーを選択"
+  },
+  "validation": {
+    "invalidEmail": "無効なメールアドレス",
+    "maxLength": "{length}文字以下でなければなりません",
+    "minLength": "{length}文字以上でなければなりません",
+    "password": {
+      "lowercase": "少なくとも1つの小文字を含む必要があります",
+      "match": "パスワードが一致する必要があります",
+      "minLength": "8文字から32文字の間でなければなりません",
+      "number": "少なくとも1つの数字を含む必要があります",
+      "requirements": "パスワードの要件",
+      "special": "少なくとも1つの特殊文字を含む必要があります",
+      "uppercase": "少なくとも1つの大文字を含む必要があります"
+    },
+    "required": "必須"
   },
   "welcome": {
     "getStarted": "はじめる",
