@@ -10,15 +10,21 @@
       />
       <Listbox
         v-model="activeCategory"
-        :options="allCategories"
+        :options="groupedMenuTreeNodes"
         option-label="translatedLabel"
+        option-group-label="label"
+        option-group-children="children"
         scroll-height="100%"
         :option-disabled="
           (option: SettingTreeNode) =>
             !queryIsEmpty && !searchResultsCategories.has(option.label ?? '')
         "
         class="border-none w-full"
-      />
+      >
+        <template #optiongroup>
+          <Divider class="my-0" />
+        </template>
+      </Listbox>
     </ScrollPanel>
     <Divider layout="vertical" class="mx-1 2xl:mx-4 hidden md:flex" />
     <Divider layout="horizontal" class="flex md:hidden" />
@@ -42,6 +48,7 @@
         </PanelTemplate>
 
         <AboutPanel />
+        <CreditsPanel />
         <Suspense>
           <KeybindingPanel />
           <template #fallback>
@@ -84,6 +91,7 @@ import { flattenTree } from '@/utils/treeUtil'
 
 import AboutPanel from './setting/AboutPanel.vue'
 import ColorPaletteMessage from './setting/ColorPaletteMessage.vue'
+import CreditsPanel from './setting/CreditsPanel.vue'
 import CurrentUserMessage from './setting/CurrentUserMessage.vue'
 import FirstTimeUIMessage from './setting/FirstTimeUIMessage.vue'
 import PanelTemplate from './setting/PanelTemplate.vue'
@@ -103,8 +111,12 @@ const ServerConfigPanel = defineAsyncComponent(
   () => import('./setting/ServerConfigPanel.vue')
 )
 
-const { activeCategory, defaultCategory, allCategories, settingCategories } =
-  useSettingUI(defaultPanel)
+const {
+  activeCategory,
+  defaultCategory,
+  settingCategories,
+  groupedMenuTreeNodes
+} = useSettingUI(defaultPanel)
 
 const {
   searchQuery,
@@ -183,14 +195,8 @@ watch(activeCategory, (_, oldValue) => {
   }
 }
 
-/* Show a separator line above the Keybinding tab */
-/* This indicates the start of custom setting panels */
-.settings-sidebar :deep(.p-listbox-option[aria-label='Keybinding']) {
-  position: relative;
-}
-
-.settings-sidebar :deep(.p-listbox-option[aria-label='Keybinding'])::before {
-  @apply content-[''] top-0 left-0 absolute w-full;
-  border-top: 1px solid var(--p-divider-border-color);
+/* Hide the first group separator */
+.settings-sidebar :deep(.p-listbox-option-group:nth-child(1)) {
+  display: none;
 }
 </style>

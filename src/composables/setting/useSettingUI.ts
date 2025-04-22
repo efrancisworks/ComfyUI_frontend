@@ -1,6 +1,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+import { useFirebaseAuthStore } from '@/stores/firebaseAuthStore'
 import { SettingTreeNode, useSettingStore } from '@/stores/settingStore'
 import type { SettingParams } from '@/types/settingTypes'
 import { isElectron } from '@/utils/envUtil'
@@ -11,6 +12,7 @@ export function useSettingUI(
   defaultPanel?: 'about' | 'keybinding' | 'extension' | 'server-config'
 ) {
   const { t } = useI18n()
+  const firebaseAuthStore = useFirebaseAuthStore()
   const settingStore = useSettingStore()
   const activeCategory = ref<SettingTreeNode | null>(null)
 
@@ -44,6 +46,12 @@ export function useSettingUI(
   const aboutPanelNode: SettingTreeNode = {
     key: 'about',
     label: 'About',
+    children: []
+  }
+
+  const creditsPanelNode: SettingTreeNode = {
+    key: 'credits',
+    label: 'Credits',
     children: []
   }
 
@@ -82,24 +90,43 @@ export function useSettingUI(
       : settingCategories.value[0]
   })
 
-  /**
-   * Translated all categories with labels
-   */
-  const translatedCategories = computed<SettingTreeNode[]>(() => {
-    return [
-      ...settingCategories.value,
-      keybindingPanelNode,
-      extensionPanelNode,
-      ...serverConfigPanelNodeList.value,
-      aboutPanelNode
-    ].map((node) => ({
-      ...node,
-      translatedLabel: t(
-        `settingsCategories.${normalizeI18nKey(node.label)}`,
-        node.label
-      )
-    }))
+  const translateCategory = (node: SettingTreeNode) => ({
+    ...node,
+    translatedLabel: t(
+      `settingsCategories.${normalizeI18nKey(node.label)}`,
+      node.label
+    )
   })
+
+  const groupedMenuTreeNodes = computed<SettingTreeNode[]>(() => [
+    // Account settings - only show when user is authenticated
+    ...(firebaseAuthStore.isAuthenticated
+      ? [
+          {
+            key: 'account',
+            label: 'Account',
+            children: [creditsPanelNode].map(translateCategory)
+          }
+        ]
+      : []),
+    // Normal settings stored in the settingStore
+    {
+      key: 'settings',
+      label: 'Application Settings',
+      children: settingCategories.value.map(translateCategory)
+    },
+    // Special settings such as about, keybinding, extension, server-config
+    {
+      key: 'specialSettings',
+      label: 'Special Settings',
+      children: [
+        keybindingPanelNode,
+        extensionPanelNode,
+        aboutPanelNode,
+        ...serverConfigPanelNodeList.value
+      ].map(translateCategory)
+    }
+  ])
 
   onMounted(() => {
     activeCategory.value = defaultCategory.value
@@ -108,7 +135,7 @@ export function useSettingUI(
   return {
     activeCategory,
     defaultCategory,
-    allCategories: translatedCategories,
+    groupedMenuTreeNodes,
     settingCategories
   }
 }

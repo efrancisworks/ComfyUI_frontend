@@ -92,6 +92,15 @@
     "Title": "제목",
     "Unpin": "고정 해제"
   },
+  "credits": {
+    "credits": "크레딧",
+    "creditsHistory": "크레딧 내역",
+    "faqs": "자주 묻는 질문",
+    "messageSupport": "지원 문의",
+    "paymentDetails": "결제 정보",
+    "purchaseCredits": "크레딧 구매",
+    "yourCreditBalance": "보유 크레딧 잔액"
+  },
   "dataTypes": {
     "AUDIO": "오디오",
     "BOOLEAN": "논리값",
@@ -137,7 +146,9 @@
   "desktopUpdate": {
     "description": "ComfyUI 데스크톱이 새로운 종속성을 설치하고 있습니다. 이 작업은 몇 분 정도 걸릴 수 있습니다.",
     "terminalDefaultMessage": "업데이트 콘솔 출력은 여기에 표시됩니다.",
-    "title": "ComfyUI 데스크톱 업데이트 중"
+    "title": "ComfyUI 데스크톱 업데이트 중",
+    "updateAvailableMessage": "업데이트가 가능합니다. 지금 재시작하고 업데이트하시겠습니까?",
+    "updateFoundTitle": "업데이트 발견 (v{version})"
   },
   "downloadGit": {
     "gitWebsite": "git 프로그램 다운로드",
@@ -166,6 +177,7 @@
     "about": "정보",
     "add": "추가",
     "all": "모두",
+    "amount": "수량",
     "apply": "적용",
     "back": "뒤로",
     "cancel": "취소",
@@ -565,6 +577,7 @@
     "Bypass/Unbypass Selected Nodes": "선택한 노드 우회/우회 해제",
     "Canvas Toggle Link Visibility": "캔버스 토글 링크 가시성",
     "Canvas Toggle Lock": "캔버스 토글 잠금",
+    "Check for Updates": "업데이트 확인",
     "Clear Pending Tasks": "보류 중인 작업 제거하기",
     "Clear Workflow": "워크플로 지우기",
     "Clipspace": "클립스페이스",
@@ -877,6 +890,7 @@
     "Graph": "그래프",
     "Group": "그룹",
     "Keybinding": "키 바인딩",
+    "Light": "라이트",
     "Link": "링크",
     "LinkRelease": "링크 해제",
     "LiteGraph": "LiteGraph",
@@ -1015,9 +1029,9 @@
         "flux_schnell": "FLUX Schnell"
       },
       "Image": {
-        "hidream_i1_dev": "HiDream I1 개발",
-        "hidream_i1_fast": "HiDream I1 빠른",
-        "hidream_i1_full": "HiDream I1 전체",
+        "hidream_i1_dev": "HiDream I1 Dev",
+        "hidream_i1_fast": "HiDream I1 Fast",
+        "hidream_i1_full": "HiDream I1 Full",
         "sd3_5_large_blur": "SD3.5 Large 블러 컨트롤넷",
         "sd3_5_large_canny_controlnet_example": "SD3.5 Large 캐니 컨트롤넷",
         "sd3_5_large_depth": "SD3.5 Large 깊이 컨트롤넷",

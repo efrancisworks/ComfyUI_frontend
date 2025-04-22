@@ -92,6 +92,15 @@
     "Title": "标题",
     "Unpin": "取消固定"
   },
+  "credits": {
+    "credits": "积分",
+    "creditsHistory": "积分历史",
+    "faqs": "常见问题",
+    "messageSupport": "联系客服",
+    "paymentDetails": "支付详情",
+    "purchaseCredits": "购买积分",
+    "yourCreditBalance": "您的积分余额"
+  },
   "dataTypes": {
     "AUDIO": "音频",
     "BOOLEAN": "布尔",
@@ -137,7 +146,9 @@
   "desktopUpdate": {
     "description": "ComfyUI桌面正在安装新的依赖项。这可能需要几分钟的时间。",
     "terminalDefaultMessage": "更新过程中的任何控制台输出都将在这里显示。",
-    "title": "正在更新ComfyUI桌面"
+    "title": "正在更新ComfyUI桌面",
+    "updateAvailableMessage": "有可用的更新。您现在要重启并更新吗？",
+    "updateFoundTitle": "找到更新 (v{version})"
   },
   "downloadGit": {
     "gitWebsite": "下载 git",
@@ -166,6 +177,7 @@
     "about": "关于",
     "add": "添加",
     "all": "全部",
+    "amount": "数量",
     "apply": "应用",
     "back": "返回",
     "cancel": "取消",
@@ -565,6 +577,7 @@
     "Bypass/Unbypass Selected Nodes": "忽略/取消忽略选定节点",
     "Canvas Toggle Link Visibility": "切换连线可见性",
     "Canvas Toggle Lock": "切换视图锁定",
+    "Check for Updates": "检查更新",
     "Clear Pending Tasks": "清除待处理任务",
     "Clear Workflow": "清除工作流",
     "Clipspace": "剪贴空间",
@@ -877,6 +890,7 @@
     "Graph": "画面",
     "Group": "组节点",
     "Keybinding": "快捷键",
+    "Light": "浅色",
     "Link": "连线",
     "LinkRelease": "释放链接",
     "LiteGraph": "画面",
