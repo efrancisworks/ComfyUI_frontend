@@ -673,7 +673,22 @@ export class ComfyApp {
     })
 
     api.addEventListener('execution_error', ({ detail }) => {
-      useDialogService().showExecutionErrorDialog(detail)
+      // Check if this is an auth-related error or credits-related error
+      if (
+        detail.exception_message ===
+        'Unauthorized: Please login first to use this node.'
+      ) {
+        useDialogService().showApiNodesSignInDialog([detail.node_type])
+      } else if (
+        detail.exception_message ===
+        'Payment Required: Please add credits to your account to use this node.'
+      ) {
+        useDialogService().showTopUpCreditsDialog({
+          isInsufficientCredits: true
+        })
+      } else {
+        useDialogService().showExecutionErrorDialog(detail)
+      }
       this.canvas.draw(true, true)
     })
 
